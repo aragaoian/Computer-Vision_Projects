@@ -22,7 +22,7 @@ else:
         if not check: break
 
         count +=1
-        frame = np.flip(frame, axis=1)
+        frame = np.flip(frame, axis=1) # create mirror effect
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)  
 
         # setting the lower and upper range for green color (detecting green)

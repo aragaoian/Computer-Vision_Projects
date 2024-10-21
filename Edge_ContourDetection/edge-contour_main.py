@@ -13,8 +13,8 @@ else:
         check, frame = cap.read()
         if not check: break # check returns a bool showing if the camera reading was sucessful or not
 
-        grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        edges = cv2.Canny(grey_frame, 100, 200, 3, L2gradient=True) # Popular edge detection algorithm
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        edges = cv2.Canny(gray_frame, 100, 200, 3, L2gradient=True) # Popular edge detection algorithm
         # Noise reduction; Finding intensity gradient of the image; 
         # Non-maximum Suppression (removing unwanted pixels); Hysteresis Thresholding (decides which are all edges are really edges and which are not.)
         contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, 
