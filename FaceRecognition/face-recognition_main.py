@@ -19,7 +19,7 @@ for filename in os.listdir(face_directory):
         img = cv2.imread(img_path)
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         boxes = face_recognition.face_locations(img_rgb, model='hog') # locate face on the img
-        encodings = face_recognition.face_encodings(img_rgb, boxes) # facil embedding for the faces
+        encodings = face_recognition.face_encodings(img_rgb, boxes) # facial embedding for the faces
         for encoding in encodings:
             known_encodings.append(encoding)
 
