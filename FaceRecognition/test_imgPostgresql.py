@@ -2,14 +2,6 @@ import psycopg2
 import cv2
 import numpy as np
 
-conn = psycopg2.connect(
-    user="postgres",
-    password="060804",
-    host="localhost",  
-    port="5432"        
-)
-cursor = conn.cursor()
-
 
 # cursor.execute("""
 #     CREATE TABLE IF NOT EXISTS images (
